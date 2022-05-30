@@ -27,6 +27,7 @@ library
   exposed-modules:
       LLang.Parser
       LLang.Syntax
+      LOptions
   other-modules:
       Paths_L_Systems
   hs-source-dirs:
