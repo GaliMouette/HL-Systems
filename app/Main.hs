@@ -1,7 +1,8 @@
 module Main where
 
 import LOptions (programLOptions)
+import LSystem (startLSystem)
 import Options.Applicative (execParser)
 
 main :: IO ()
-main = putStrLn "Hello World !" << execParser programLOptions
+main = startLSystem =<< execParser programLOptions

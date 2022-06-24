@@ -3,13 +3,13 @@ module LLang.Syntax (LSystem (..), LHeader (..), LRule (..), Action (..), Direct
 data LSystem = LSystem {headers :: [LHeader], rules :: [LRule]}
   deriving (Show)
 
-data LHeader = Axiom String | Angle Int
+data LHeader = Axiom String | Angle Float
   deriving (Show)
 
 data LRule = LRule {input :: Char, output :: String}
   deriving (Show)
 
-data Action = Draw Direction | Move Direction | Rotate Side | Push | Pop
+data Action = Draw Direction | Move Direction | Rotation Side | Push | Pop
   deriving (Show)
 
 data Direction = Forward | Backward
@@ -24,8 +24,8 @@ symbols =
     ('B', Draw Backward),
     ('f', Move Forward),
     ('b', Move Backward),
-    ('+', Rotate RightSide),
-    ('-', Rotate LeftSide),
+    ('+', Rotation RightSide),
+    ('-', Rotation LeftSide),
     ('[', Push),
     (']', Pop)
   ]

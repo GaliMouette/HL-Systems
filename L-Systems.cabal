@@ -25,9 +25,11 @@ source-repository head
 
 library
   exposed-modules:
+      LDraw
       LLang.Parser
       LLang.Syntax
       LOptions
+      LSystem
   other-modules:
       Paths_L_Systems
   hs-source-dirs:
