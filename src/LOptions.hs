@@ -1,6 +1,24 @@
 module LOptions (LOptions (..), programLOptions) where
 
-import Options.Applicative (Parser, ParserInfo, auto, fullDesc, header, help, helper, info, long, metavar, option, progDesc, showDefault, strOption, switch, value, (<**>))
+import Options.Applicative
+  ( Parser,
+    ParserInfo,
+    auto,
+    fullDesc,
+    header,
+    help,
+    helper,
+    info,
+    long,
+    metavar,
+    option,
+    progDesc,
+    showDefault,
+    strOption,
+    switch,
+    value,
+    (<**>),
+  )
 
 data LOptions = LOptions
   { gen :: Int,
@@ -33,11 +51,7 @@ genLOption =
     )
 
 animLOption :: Parser Bool
-animLOption =
-  switch
-    ( long "animate"
-        <> help "Whether to animate"
-    )
+animLOption = switch (long "animate" <> help "Whether to animate")
 
 fileLOption :: Parser String
 fileLOption =
