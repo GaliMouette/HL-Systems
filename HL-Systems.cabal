@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           L-Systems
+name:           HL-Systems
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/GaliMouette/L-Systems#readme>
 homepage:       https://github.com/GaliMouette/L-Systems#readme
@@ -31,7 +31,7 @@ library
       LOptions
       LSystem
   other-modules:
-      Paths_L_Systems
+      Paths_HL_Systems
   hs-source-dirs:
       src
   build-depends:
@@ -44,7 +44,7 @@ library
 executable L-Systems-exe
   main-is: Main.hs
   other-modules:
-      Paths_L_Systems
+      Paths_HL_Systems
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -60,7 +60,7 @@ test-suite L-Systems-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_L_Systems
+      Paths_HL_Systems
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
